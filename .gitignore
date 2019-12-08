@@ -1,0 +1,9 @@
+# IDE
+/.idea
+
+# Others
+/node_modules
+
+# Env
+.env
+.env.backup*
