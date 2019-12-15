@@ -4,6 +4,9 @@
 # Others
 /node_modules
 
+# Log
+/log*
+
 # Env
 .env
 .env.backup*
