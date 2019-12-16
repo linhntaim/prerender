@@ -1,44 +1,54 @@
 {
-    "name": "@linhntaim/prerender",
+    "name": "@linhntaim/render-server-manager",
     "version": "1.0.0",
-    "description": "Pre-render your SPA",
-    "main": "dist/main.js",
+    "description": "Manage server to render your SPA",
+    "main": "dist/index.js",
     "scripts": {
-        "start": "node ./dist/main.js",
-        "build": "babel src --out-dir ./dist --delete-dir-on-start --minified --source-maps"
+        "start": "node ./dist/server.js",
+        "build": "babel *.js --out-dir ./dist --delete-dir-on-start --minified --source-maps && babel src --out-dir ./dist/src --minified --source-maps",
+        "test": "nyc mocha --require @babel/register",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/linhntaim/prerender.git"
     },
     "keywords": [
-        "prerender",
-        "prerender.io",
-        "application",
+        "render",
         "server",
+        "manager",
+        "application",
+        "prerender",
+        "prerender-io",
+        "prerender.io",
         "node",
         "nodejs",
         "node-js",
         "node.js",
         "SPA",
-        "SEO",
-        "customization"
+        "SEO"
     ],
-    "author": "Nguyen Tuan Linh <linhnt.aim@outlook.com>",
-    "license": "ISC",
+    "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://linhntaim.com)",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/linhntaim/prerender/issues"
     },
     "homepage": "https://github.com/linhntaim/prerender#readme",
     "dependencies": {
         "dotenv": "^8.2.0",
-        "dotenv-conversion": "^1.3.0",
+        "dotenv-conversion": "^1.4.1",
         "dotenv-expand": "^5.1.0",
+        "illuminate-support": "0.0.3",
         "prerender": "^5.6.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.5",
         "@babel/core": "^7.7.5",
-        "@babel/preset-env": "^7.7.6"
+        "@babel/preset-env": "^7.7.6",
+        "@babel/register": "^7.7.4",
+        "chai": "^4.2.0",
+        "coveralls": "^3.0.9",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1"
     }
 }

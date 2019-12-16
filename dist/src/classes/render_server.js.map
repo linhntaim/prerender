@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/classes/render_server.js"],"names":["RenderServer","server"],"mappings":"mPAAqBA,CAAAA,Y,CACjB,uBAAc,oCACV,KAAKC,MAAL,CAAc,IACjB,C","sourcesContent":["export default class RenderServer {\r\n    constructor() {\r\n        this.server = null\r\n    }\r\n}"],"file":"render_server.js"}

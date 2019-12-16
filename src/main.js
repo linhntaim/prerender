@@ -1,9 +1,8 @@
 import dotEnv from 'dotenv'
 import dotEnvExpand from 'dotenv-expand'
 import dotEnvConversion from 'dotenv-conversion'
-import {loadConfigurations, loadPlugins} from './utils'
-import PreRenderServer from './classes/pre_render_server'
+import RenderServerManager from './classes/render_server_manager'
 
 dotEnvConversion.make(dotEnvExpand(dotEnv.config()))
 
-new PreRenderServer(loadConfigurations(dotEnvConversion.env), loadPlugins(dotEnvConversion.env)).on()
+export default new RenderServerManager()

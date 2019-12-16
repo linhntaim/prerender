@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function")}}var RenderServer=function RenderServer(){_classCallCheck(this,RenderServer);this.server=null};exports["default"]=RenderServer;
+//# sourceMappingURL=render_server.js.map
