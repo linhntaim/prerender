@@ -1,2 +1,2 @@
-"use strict";var _index=_interopRequireDefault(require("./index"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}_index["default"].server();
+"use strict";var _dotenvPacked=require("dotenv-packed");var _index=_interopRequireDefault(require("./index"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}(0,_dotenvPacked.install)();_index["default"].start();
 //# sourceMappingURL=server.js.map

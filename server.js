@@ -1,3 +1,6 @@
+import {install} from 'dotenv-packed'
 import RenderServerManager from './index'
 
-RenderServerManager.server()
+install()
+
+RenderServerManager.start()
