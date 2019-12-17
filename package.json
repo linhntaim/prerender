@@ -1,7 +1,7 @@
 {
-    "name": "@linhntaim/render-server-manager",
+    "name": "render-man",
     "version": "1.0.0",
-    "description": "Manage server to render your SPA",
+    "description": "A middle man wants to render your SPA",
     "main": "dist/index.js",
     "scripts": {
         "start": "node ./dist/server.js",

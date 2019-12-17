@@ -31,6 +31,7 @@ export default class PrerenderIoServer extends RenderServer {
             if (env.hasOwnProperty(config[key])) {
                 config[key] = env[config[key]]
             }
+            else delete config[key]
         }
         return config
     }

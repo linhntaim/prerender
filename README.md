@@ -1,4 +1,4 @@
-# prerender
+# render-man
 
 The application to pre-render your SPA on the server.
 
@@ -31,6 +31,7 @@ vi .env
 
 ```shell script
 npm update && apt install supervisor -y
+
 cat > /etc/supervisor/conf.d/prerender.conf
 [program:prerender]
 process_name=%(program_name)s_%(process_num)02d
@@ -43,6 +44,7 @@ environment=NODE_ENV=production
 stderr_logfile=/var/www/prerender/logs/err.log
 stdout_logfile=/var/www/prerender/logs/out.log
 ^Z
+
 supervisorctl reread
 supervisorctl update
 supervisorctl start prerender:*

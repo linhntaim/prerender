@@ -1,8 +1,8 @@
-import dotEnv from 'dotenv'
-import dotEnvExpand from 'dotenv-expand'
-import dotEnvConversion from 'dotenv-conversion'
+import dotenv from 'dotenv'
+import dotenvExpand from 'dotenv-expand'
+import dotenvConversion from 'dotenv-conversion'
 import RenderServerManager from './classes/render_server_manager'
 
-dotEnvConversion.make(dotEnvExpand(dotEnv.config()))
+dotenvConversion.make(dotenvExpand(dotenv.config()))
 
 export default new RenderServerManager()
