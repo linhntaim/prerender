@@ -145,9 +145,9 @@ location @renderman {
     }
 
     if ($renderman = 1) {
-        set $port = 3000; # Port to run the application, set in .env file
+        set $port 3000; # Port to run the application, set in .env file
         rewrite .* /$scheme://$host$request_uri? break;
-        proxy_pass http://localhost:${port};
+        proxy_pass http://localhost:$port;
     }
     if ($renderman = 0) {
         rewrite .* /index.html?$query_string break;
