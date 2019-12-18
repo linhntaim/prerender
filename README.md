@@ -1,6 +1,6 @@
 # render-man
 
-The module, also an application, to pre-render your SPA on the server.
+A middle man, also a module and an application, wants to render your SPA on the server.
 
 ## 1. As an module
 
@@ -51,8 +51,11 @@ Here are things to guide you to install on Ubuntu.
 - Clone and prepare the application:
 
 ```shell script
+# Clone the application to /var/www/render-man
 cd /var/www
 git clone https://github.com/linhntaim/render-man.git render-man
+
+# Go install modules and create a folder for logging
 cd render-man
 npm install
 mkdir logs
@@ -68,8 +71,10 @@ vi .env
 - Install the `supervisor` and use it to handle the application's running.
 
 ```shell script
+# Install supervisor
 npm update && apt install supervisor -y
 
+# Create a configuration to run the application with supervisor
 cat > /etc/supervisor/conf.d/render-man.conf
 [program:render-man]
 process_name=%(program_name)s_%(process_num)02d
@@ -83,8 +88,11 @@ stderr_logfile=/var/www/render-man/logs/err.log
 stdout_logfile=/var/www/render-man/logs/out.log
 ^Z
 
+# Update the configuration so supervisor can recognize it
 supervisorctl reread
 supervisorctl update
+
+# Start the application
 supervisorctl start render-man:*
 ```
 
