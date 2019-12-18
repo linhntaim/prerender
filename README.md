@@ -30,6 +30,8 @@ RenderServerManager.start()
 node server.js
 ```
 
+*Note: As default, [Google Chrome](https://www.google.com/linuxrepositories/) is required to run. Please install it first.*
+
 ### 1.3. Configuration
 
 Create an .env file along with application script (`server.js`) and make some configurations on it.
