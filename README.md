@@ -134,10 +134,10 @@ location @renderman {
     if ($http_user_agent ~* "googlebot|bingbot|bingpreview|yandex|baiduspider|twitterbot|facebookexternalhit|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|pinterestbot|slackbot|vkShare|W3C_Validator|whatsapp") {
         set $renderman 1;
     }
-    if ($args ~ "_render_man_") {
+    if ($args ~ "_escaped_fragment_") {
         set $renderman 1;
     }
-    if ($http_user_agent ~ "Render-Man") {
+    if ($http_user_agent ~ "Prerender") {
         set $renderman 0;
     }
     if ($uri ~* "\.(js|css|xml|less|png|jpg|jpeg|gif|pdf|doc|txt|ico|rss|zip|mp3|rar|exe|wmv|doc|avi|ppt|mpg|mpeg|tif|wav|mov|psd|ai|xls|mp4|m4a|swf|dat|dmg|iso|flv|m4v|torrent|ttf|woff|svg|eot)") {
@@ -146,8 +146,9 @@ location @renderman {
 
     if ($renderman = 1) {
         set $port 3000; # Port to run the application, set in .env file
+        set $renderman "localhost:${port}";
         rewrite .* /$scheme://$host$request_uri? break;
-        proxy_pass http://localhost:$port;
+        proxy_pass http://$renderman;
     }
     if ($renderman = 0) {
         rewrite .* /index.html?$query_string break;
