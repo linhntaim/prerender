@@ -1,6 +1,6 @@
 {
     "name": "render-man",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A middle man, also a module and an application, wants to render your SPA on the server.",
     "main": "dist/index.js",
     "scripts": {
