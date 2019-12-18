@@ -1,6 +1,6 @@
-import {install} from 'dotenv-packed'
+import {parseEnv} from 'dotenv-packed'
 import RenderServerManager from './index'
 
-install()
+parseEnv()
 
 RenderServerManager.start()

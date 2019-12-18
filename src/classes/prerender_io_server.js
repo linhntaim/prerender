@@ -1,4 +1,4 @@
-import {getenv} from 'dotenv-packed'
+import {getEnv} from 'dotenv-packed'
 import prerender from 'prerender'
 import RenderServer from './render_server'
 
@@ -18,7 +18,7 @@ export default class PrerenderIoServer extends RenderServer {
     }
 
     loadConfigurations() {
-        const env = getenv()
+        const env = getEnv()
         const config = {
             port: 'PORT',
 
@@ -34,13 +34,15 @@ export default class PrerenderIoServer extends RenderServer {
         for (const key in config) {
             if (env.hasOwnProperty(config[key])) {
                 config[key] = env[config[key]]
-            } else delete config[key]
+            } else {
+                delete config[key]
+            }
         }
         return config
     }
 
     loadPlugins() {
-        const env = getenv()
+        const env = getEnv()
         return env.hasOwnProperty('USE_PLUGINS') ? env['USE_PLUGINS'] : []
     }
 }

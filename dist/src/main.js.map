@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/main.js"],"names":["RenderServerManager"],"mappings":"gGAAA,8F,iGAEe,GAAIA,kC","sourcesContent":["import RenderServerManager from './classes/render_server_manager'\r\n\r\nexport default new RenderServerManager()"],"file":"main.js"}

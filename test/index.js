@@ -1,5 +1,5 @@
-import {install} from 'dotenv-packed'
-import RenderServerManager from '../index'
+import {parseEnv} from 'dotenv-packed'
+import RenderServerManager from '../src'
 import PrerenderIoServer from '../src/classes/prerender_io_server'
 import RenderServer from '../src/classes/render_server'
 
@@ -32,7 +32,7 @@ describe('render-server-manager', function () {
             }
 
             Object.assign(process.env, input)
-            install()
+            parseEnv()
             RenderServerManager.getDefaultDriver().should.equal('prerender_io')
             RenderServerManager.server().should.be.an.instanceOf(PrerenderIoServer)
             done()
@@ -68,7 +68,7 @@ describe('render-server-manager', function () {
             const expectedPlugins = ['removeScriptTags', 'httpHeaders']
 
             Object.assign(process.env, input)
-            install()
+            parseEnv()
             RenderServerManager.getDefaultDriver().should.equal('prerender_io')
             const prerenderIoServer = RenderServerManager.server()
             prerenderIoServer.loadConfigurations().should.deep.include(expectedConfiguration)

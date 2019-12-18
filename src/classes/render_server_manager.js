@@ -1,4 +1,4 @@
-import {getenv} from 'dotenv-packed'
+import {getEnv} from 'dotenv-packed'
 import {Manager} from 'illuminate-support'
 import RenderServer from './render_server'
 import PrerenderIoServer from './prerender_io_server'
@@ -13,7 +13,7 @@ export default class RenderServerManager extends Manager {
     }
 
     getDefaultDriver() {
-        const defaultServer = getenv('DEFAULT_SERVER')
+        const defaultServer = getEnv('DEFAULT_SERVER')
         return defaultServer ? defaultServer : 'default'
     }
 

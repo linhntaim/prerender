@@ -1,2 +1,2 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;var _main=_interopRequireDefault(require("./src/main"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}var _default=_main["default"];exports["default"]=_default;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports["default"]=void 0;var _render_server_manager=_interopRequireDefault(require("./classes/render_server_manager"));function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj}}var _default=new _render_server_manager["default"];exports["default"]=_default;
 //# sourceMappingURL=index.js.map

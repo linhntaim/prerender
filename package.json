@@ -5,7 +5,7 @@
     "main": "dist/index.js",
     "scripts": {
         "start": "node ./dist/server.js",
-        "build": "babel *.js --out-dir ./dist --delete-dir-on-start --minified --source-maps && babel src --out-dir ./dist/src --minified --source-maps",
+        "build": "babel src --out-dir ./dist --delete-dir-on-start --minified --source-maps",
         "test": "nyc mocha --require @babel/register",
         "coverage": "nyc report --reporter=text-lcov | coveralls"
     },
@@ -35,8 +35,7 @@
     },
     "homepage": "https://github.com/linhntaim/prerender#readme",
     "dependencies": {
-        "dotenv-conversion": "^1.4.1",
-        "dotenv-packed": "^1.0.1",
+        "dotenv-packed": "^1.1.0",
         "illuminate-support": "0.0.3",
         "prerender": "^5.6.0"
     },
