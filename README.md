@@ -2,7 +2,7 @@
 
 A middle man, also a module and an application, wants to render your SPA on the server.
 
-## 1. As an module
+## 1. As a module
 
 ### 1.1. Install
 
@@ -11,7 +11,7 @@ npm install render-man
 ```
 ### 1.2. Usage
 
-Create a .js file (such as `server.js`) with the following basic content:
+Create a `.js` file (such as `server.js`) with the following basic content:
 
 ```javascript
 // server.js
@@ -24,7 +24,7 @@ parseEnv()
 RenderServerManager.start()
 ```
 
-.. then run it:
+... then run it:
 
 ```shell script
 node server.js
@@ -34,7 +34,7 @@ node server.js
 
 ### 1.3. Configuration
 
-Create an .env file along with application script (`server.js`) and make some configurations on it.
+Create an `.env` file along with application script (`server.js`) and make some configurations on it.
 
 See [3. Configuration](#3-configuration) for environment variables that can be set.
 
@@ -223,9 +223,9 @@ You can make some configuration via `.env` file.
 - **`CHROME_FLAGS`**
 
     - Run Google Chrome with some options.
-    - Each option should be wrapped by double quote (`"`) and separated by comma (`,`). All should lie inside brackets (`[...]`).
+    - Each option should be wrapped by double quotes (`"`) and separated by the comma (`,`). All should lie inside brackets (`[...]`).
         - Example: `CHROME_FLAGS=["--no-sandbox","--headless"]`
-    - If there is no options, please leave it as blank inside brackets.
+    - If there are no options, please leave it as blank inside brackets.
         - Example: `CHROME_FLAGS=[]`.
     - Default: `["--no-sandbox","--headless","--disable-gpu"]`.
 
@@ -246,8 +246,8 @@ You can make some configuration via `.env` file.
             - See [`blacklist`](https://github.com/renderman/renderman#blacklist).
         - `in-memory-cache`
             - See [`in-memory-cache`](https://github.com/renderman/renderman#in-memory-cache).
-    - Each plugin should be wrapped by double quote (`"`) and separated by comma (`,`). All should lie inside brackets (`[...]`).
+    - Each plugin should be wrapped by double quotes (`"`) and separated by the comma (`,`). All should lie inside brackets (`[...]`).
         - Example: `USE_PLUGINS=["removeScriptTags","blockedResources,"httpHeaders"]`
-    - If there is no plugins, please leave it as blank inside brackets.
+    - If there are no plugins, please leave it as blank inside brackets.
         - Example: `USE_PLUGINS=[]`.
-    - Default: `[]`
+    - Default: `[]`.

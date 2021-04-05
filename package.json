@@ -1,6 +1,6 @@
 {
     "name": "render-man",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A middle man, also a module and an application, wants to render your SPA on the server.",
     "main": "dist/index.js",
     "scripts": {
@@ -35,18 +35,18 @@
     },
     "homepage": "https://github.com/linhntaim/prerender#readme",
     "dependencies": {
-        "dotenv-packed": "^1.1.0",
-        "illuminate-support": "0.0.3",
-        "prerender": "^5.6.0"
+        "dotenv-packed": "^1.2.2",
+        "illuminate-support": "^0.0.3",
+        "prerender": "^5.8.2"
     },
     "devDependencies": {
-        "@babel/cli": "^7.7.5",
-        "@babel/core": "^7.7.5",
-        "@babel/preset-env": "^7.7.6",
-        "@babel/register": "^7.7.4",
-        "chai": "^4.2.0",
-        "coveralls": "^3.0.9",
-        "mocha": "^6.2.2",
-        "nyc": "^14.1.1"
+        "@babel/cli": "^7.13.14",
+        "@babel/core": "^7.13.14",
+        "@babel/preset-env": "^7.13.12",
+        "@babel/register": "^7.13.14",
+        "chai": "^4.3.4",
+        "coveralls": "^3.1.0",
+        "mocha": "^8.3.2",
+        "nyc": "^15.1.0"
     }
 }
