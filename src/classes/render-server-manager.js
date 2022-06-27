@@ -1,16 +1,11 @@
 import {getEnv} from 'dotenv-packed'
-import {Manager} from 'illuminate-support'
 import RenderServer from './render-server'
 import PrerenderIoServer from './prerender-io-server'
 
-export default class RenderServerManager extends Manager
+export default class RenderServerManager
 {
     constructor() {
-        super(null)
-    }
-
-    server(server = null) {
-        return this.driver(server)
+        this.servers = {}
     }
 
     getDefaultDriver() {
@@ -18,16 +13,33 @@ export default class RenderServerManager extends Manager
         return defaultServer ? defaultServer : 'default'
     }
 
-    createDefaultDriver() {
+    server(server = null) {
+        server = server ? server : this.getDefaultDriver()
+        if (!(server in this.servers)) {
+            return this.servers[server] = this.createServer(server)
+        }
+        return this.servers[server]
+    }
+
+    createServer(server) {
+        switch (server) {
+            case 'prerender_io':
+                return this.createPrerenderIoServer()
+            default:
+                return this.createDefaultServer()
+        }
+    }
+
+    createDefaultServer() {
         return new RenderServer()
     }
 
-    createPrerenderIoDriver() {
+    createPrerenderIoServer() {
         return new PrerenderIoServer()
     }
 
     start(server = null) {
-        const s = this.driver(server)
+        const s = this.server(server)
         return !s || s.start()
     }
 }

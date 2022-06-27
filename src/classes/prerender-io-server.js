@@ -6,7 +6,6 @@ export default class PrerenderIoServer extends RenderServer
 {
     constructor() {
         super()
-
     }
 
     start() {
