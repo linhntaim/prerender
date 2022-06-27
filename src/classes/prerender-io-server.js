@@ -1,8 +1,9 @@
 import {getEnv} from 'dotenv-packed'
 import prerender from 'prerender'
-import RenderServer from './render_server'
+import RenderServer from './render-server'
 
-export default class PrerenderIoServer extends RenderServer {
+export default class PrerenderIoServer extends RenderServer
+{
     constructor() {
         super()
 
@@ -34,7 +35,8 @@ export default class PrerenderIoServer extends RenderServer {
         for (const key in config) {
             if (env.hasOwnProperty(config[key])) {
                 config[key] = env[config[key]]
-            } else {
+            }
+            else {
                 delete config[key]
             }
         }

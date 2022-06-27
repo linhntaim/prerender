@@ -1,3 +1,3 @@
-import RenderServerManager from './classes/render_server_manager'
+import RenderServerManager from './classes/render-server-manager'
 
 export default new RenderServerManager()

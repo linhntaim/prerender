@@ -1,7 +1,7 @@
 import {parseEnv} from 'dotenv-packed'
 import RenderServerManager from '../src'
-import PrerenderIoServer from '../src/classes/prerender_io_server'
-import RenderServer from '../src/classes/render_server'
+import PrerenderIoServer from '../src/classes/prerender-io-server'
+import RenderServer from '../src/classes/render-server'
 
 import mocha from 'mocha'
 import chai from 'chai'

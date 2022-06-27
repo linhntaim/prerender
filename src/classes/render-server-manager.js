@@ -1,9 +1,10 @@
 import {getEnv} from 'dotenv-packed'
 import {Manager} from 'illuminate-support'
-import RenderServer from './render_server'
-import PrerenderIoServer from './prerender_io_server'
+import RenderServer from './render-server'
+import PrerenderIoServer from './prerender-io-server'
 
-export default class RenderServerManager extends Manager {
+export default class RenderServerManager extends Manager
+{
     constructor() {
         super(null)
     }

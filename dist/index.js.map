@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/index.js"],"names":["RenderServerManager"],"mappings":"gGAAA,8F,iGAEe,GAAIA,kC","sourcesContent":["import RenderServerManager from './classes/render_server_manager'\r\n\r\nexport default new RenderServerManager()"],"file":"index.js"}
+{"version":3,"file":"index.js","names":["RenderServerManager"],"sources":["../src/index.js"],"sourcesContent":["import RenderServerManager from './classes/render-server-manager'\r\n\r\nexport default new RenderServerManager()\r\n"],"mappings":"gGAAA,4F,iGAEe,GAAIA,gC"}
